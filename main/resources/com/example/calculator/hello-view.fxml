@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="602.0" prefWidth="367.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label prefHeight="22.0" prefWidth="81.0" text="Введите число" />
+    <TextField fx:id="textField1" prefHeight="6.0" prefWidth="166.0" />
+    <Label text="Выберите процент" />
+    <RadioButton fx:id="rb1" mnemonicParsing="false" onAction="#percent" text="3 %" textOverrun="CENTER_WORD_ELLIPSIS">
+        <toggleGroup>
+            <ToggleGroup fx:id="percent_group" />
+        </toggleGroup></RadioButton>
+    <RadioButton fx:id="rb2" mnemonicParsing="false" onAction="#percent" text="10%" toggleGroup="$percent_group" />
+    <RadioButton fx:id="rb3" mnemonicParsing="false" onAction="#percent" text="15%" toggleGroup="$percent_group" />
+    <Button onAction="#onHelloButtonClick" text="Start" />
+    <Label text="Результат:" />
+    <TextField fx:id="textField2" />
+
+
+</VBox>
